@@ -53,7 +53,7 @@ const team = {
   
   addGame(oppName, points,oppPoints){
     const game = {
-      oppName: oppName,     // may be mistake
+      oppName: oppName,     // maybe a mistake
       points: points,
       oppPoints: oppPoints
     }
