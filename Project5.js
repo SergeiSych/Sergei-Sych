@@ -24,7 +24,8 @@ class School  {
   }
   
   quickFacts() {
-    console.log(`${this.name} educates ${this.numberOfStudents} students at the ${this.level} school level. `);
+    console.log(`${this.name} educates ${this.numberOfStudents} students at the
+     ${this.level} school level. `);
   }
   
   static
@@ -46,7 +47,7 @@ class School  {
   }
   
   class HighSchool extends School {
-    constructor (name, numberOfStudents, sportsTeams) {
+    constructor(name, numberOfStudents, sportsTeams) {
   this._sportsTeams = sportsTeams;
     }
     get sportsTeams() {
