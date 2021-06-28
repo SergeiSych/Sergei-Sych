@@ -1,19 +1,10 @@
-const { builder, By, Builder, } = require("selenium-webdriver");
 
-const driver = new Builder()
-    .forBrowser("firefox")
-    .build();
+var moment= require('moment') 
+//moment.format("DD-MM-YYYY")
+//let f = moment().add(4, 'days').calendar();
+var f = moment().add(5, 'd').format('DD.MM.YYYY.')
+console.log(f);
 
-  async function simpleRegistration() {
-      try {
-       await driver.get("https://rori4.github.io/selenium-practice/#/pages/practice/simple-registration");
-       await driver.findElement(By.name("email")).sendKeys("example@gmail.com");
-       await driver.findElement(By.id("password")).sendKeys("12345");
-       await driver.findElement(By.name("submit")).click();
-       await driver.findElement(By.className("btn btn-hero-success main-btn")).click();
-      } catch (error) {
-          console.log(error)
-      }
-  }
-
-  simpleRegistration();
+//let date = new Date().toLocaleDateString();
+//add.Date(4, 'day')
+//console.log(Date);
