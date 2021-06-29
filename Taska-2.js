@@ -11,8 +11,9 @@ const driver = new Builder()
       try {
        await driver.get("http://google.com")
        await driver.findElement(By.name("q")).sendKeys("белорусская железная дорога",Key.RETURN);
-       await driver.wait(until.elementLocated(By.xpath('//*[@id="rso"]/div[1]/div/div/div/div/div/div[1]/a'))).click();
-       await driver.findElement(By.xpath('/html/body/div[3]/div[3]/div[2]/div[2]/div[3]/div[1]/div[4]/a')).click();
+       await driver.wait(until.elementLocated(By.xpath
+        ("//*[@class='yuRUbf'][1]"))).click();
+       await driver.wait(until.elementLocated(By.xpath("//*[@class='top-lang__item']/a[contains(text(), 'ENG')]"))).click();
        const newsContainer = await driver.findElement(By.css('.index-news-list'));
        const news = await newsContainer.findElements(By.css('dt'))
        const EXPECTED_NEWS_COUNT = 4;

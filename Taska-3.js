@@ -15,7 +15,7 @@ async function taska3() {
         await driver.get("https://www.rw.by/")
         await driver.findElement(By.name("q")).sendKeys(searchQuery);
         
-        await driver.findElement(By.xpath("/html/body/div[3]/div[3]/div[2]/div[2]/div[3]/div[2]/form/button")).click();
+        await driver.findElement(By.css("[type = submit]")).click();
         const currentUrl = await driver.getCurrentUrl()
         expect(currentUrl).to.include(searchQuery)  
         const nothingFoundText = await driver.findElement(By.xpath("//font")).getText()

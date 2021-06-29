@@ -33,12 +33,12 @@ async function taska4() {
             
             //await driver.manage().setTimeouts( { implicit: 10000 } );
             await driver.findElement(By.xpath
-                ('/html/body/div[1]/div[1]/div[1]/div/div/div/div[2]/main/div[2]/div[3]/div[2]/div[1]/div[3]/div/div[1]/div/div[1]/a')).click();
+                (".//*[@class = 'sch-table__cell cell-1']/a[1]")).click();
                 await driver.findElement(By.className("sch-title__title h2")).isDisplayed();
             const str = await driver.findElement(By.css('.train-table__link')).getText(); 
             console.log(/[А-яЁё]/.test(str));
-            await driver.wait(until.elementLocated(By.xpath('//*[@id="db"]/div[1]/div[1]/div/header/div/div[3]/div[1]/a')));
-            await driver.findElement(By.xpath('//*[@id="db"]/div[1]/div[1]/div/header/div/div[3]/div[1]/a')).click().clickAndWait;  
+            await driver.wait(until.elementLocated(By.xpath(".//*[@class = 'header-bottom']/div/a"))).click().clickAndWait;;
+            //await driver.findElement(By.xpath('//*[@id="db"]/div[1]/div[1]/div/header/div/div[3]/div[1]/a')).click().clickAndWait;  
         });
     } catch (error) {
         console.log(error)

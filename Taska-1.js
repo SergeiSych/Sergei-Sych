@@ -19,5 +19,6 @@ async function taska1() {
     } catch (error) {
         console.log(error)
     }
+    driver.quit()
 }
 taska1();
