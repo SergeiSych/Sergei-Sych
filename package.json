@@ -1,17 +1,16 @@
 {
-  "name": "driverConfig",
+  "name": "driverconfig",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-    
+    "test": "mocha -timeout 10000"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chai": "^4.3.4",
+    "foxdriver": "^1.0.5",
     "moment": "^2.29.1",
     "selenium-webdriver": "^4.0.0-beta.4"
   },
@@ -24,5 +23,14 @@
     "jest": "^27.0.6",
     "mocha": "^9.0.0",
     "prettier": "^2.3.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergeiSych/Sergei-Sych.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SergeiSych/Sergei-Sych/issues"
+  },
+  "homepage": "https://github.com/SergeiSych/Sergei-Sych#readme",
+  "description": ""
 }
