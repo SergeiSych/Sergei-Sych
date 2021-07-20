@@ -10,9 +10,7 @@ class Page{
     go_to_url(theURL) {
     driver.get(theURL)
     }
-    go_to_url_1(theURL) {
-        driver.get(theURL)
-        }
+
     // go_to_main_page(theURL){
     //     driver.get(theURL)
     // }

@@ -3,8 +3,6 @@ var Page = require('./google');
 var webdriver = require('selenium-webdriver');
 
 class GooglePage extends Page{
-    super()
-    
     enter_search(searchText){
     driver.findElement(By.css('input[name=q]')).sendKeys(searchText);
     driver.findElement(By.css('input[name=q]')).sendKeys(Key.ENTER);

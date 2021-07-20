@@ -28,8 +28,8 @@ class Test_3 {
         const nothingFoundText = await driver.findElement(By.xpath("//font")).getText()
         expect(nothingFoundText).to.include("К сожалению, на ваш поисковый запрос ничего не найдено.");
     }
-    clearText() {
-        driver.findElement(By.xpath('//*[@id="searchinpm"]')).clear();
+    async clearText() {
+        await driver.findElement(By.xpath('//*[@id="searchinpm"]')).clear();
     }
     async newText() {
         await driver.findElement(By.xpath('//*[@id="searchinpm"]')).sendKeys("Санкт-Петербург");
